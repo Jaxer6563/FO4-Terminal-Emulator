@@ -14,8 +14,10 @@ def typingInput(text):
     value=input()
     return value
 
+###
+#typingPrint("Hello Stupid Humans \nYou are a stupid Human\n")
+#typingInput("How do you feel about being a stupid Human?\n")
+#typingPrint("FeelsBadMan")
 
-typingPrint("Hello Stupid Humans \nYou are a stupid Human\n")
-typingInput("How do you feel about being a stupid Human?\n")
-typingPrint("FeelsBadMan")
-
+###
+typingPrint("You take the blue pill... the story ends, you wake up in your bed and beleive whatever you want to believe.")
