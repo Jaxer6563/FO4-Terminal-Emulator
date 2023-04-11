@@ -1,3 +1,2 @@
 Notes
 1) install colorama [pip install colorama]
-2) install curses [pip install windows-curses
