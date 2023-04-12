@@ -1,6 +1,73 @@
-import time, sys
+import time, sys, shutil
 from Lib.typing import typing
 from Lib.clear import clear
+
+FileName1 = " Tips\n\n"
+FileName2 = " Chem Supplier Notes\n\n"
+columns = shutil.get_terminal_size().columns
+
+def loadingScreen(delay):
+    print("▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+    print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓.center(columns)")
+    time.sleep(delay)
+    clear.clear()
+
 def startup():
     typing.typingPrint("\n\n> LOGON ADMIN")
     time.sleep(1)
@@ -13,11 +80,10 @@ def startup():
     clear.clear()
     print("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK")
     time.sleep(1)
-    typing.typingPrintDelay("\n ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓",0.5)
+    loadingScreen(0.5)
     time.sleep(1)
     clear.clear()
-    
-    
+      
 def home():
     print("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK\n")
     time.sleep(1)
@@ -28,9 +94,6 @@ def home():
     input()
 
 typing.typingPrint("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK")
-FileName1 = "Tips\n\n"
-FileName2 = "Chem Supplier Notes\n\n"
-
 time.sleep(1)
 startup()
 home()
