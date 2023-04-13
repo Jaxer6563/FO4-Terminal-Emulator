@@ -18,14 +18,22 @@ def typingPrint(text): # Has a delay between individual characters appearing on 
 
 def typingInput(text): # Has a delay between individual characters appearing on the screen
     for character in text:
-        sys.stdout.write(Fore.GREEN + Back.BLACK + Style.BRIGHT + character)
-        sys.stdout.flush()
-        time.sleep(sleeptime())
+        if character == " ":
+            sys.stdout.write(Fore.GREEN + Back.BLACK + Style.BRIGHT + character)
+            sys.stdout.flush()
+        else:
+            sys.stdout.write(Fore.GREEN + Back.BLACK + Style.BRIGHT + character)
+            sys.stdout.flush()
+            time.sleep(sleeptime())
     value=input()
     return value
 
 def typingPrintDelay(text, delay): # Version of typingPrint() that allows user to specify the duration of the delay between keystrokes
     for character in text:
-        sys.stdout.write(Fore.GREEN + Back.BLACK + Style.BRIGHT + character)
-        sys.stdout.flush()
-        time.sleep(delay)
+        if character == " ":
+            sys.stdout.write(Fore.GREEN + Back.BLACK + Style.BRIGHT + character)
+            sys.stdout.flush()
+        else:
+            sys.stdout.write(Fore.GREEN + Back.BLACK + Style.BRIGHT + character)
+            sys.stdout.flush()
+            time.sleep(sleeptime())
