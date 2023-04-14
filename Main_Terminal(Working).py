@@ -1,4 +1,4 @@
-import time, sys, shutil, random
+import time, sys, shutil
 from Lib.typing import typing
 from Lib.clear import clear
 
@@ -18,39 +18,31 @@ def loadingScreenTyping(delay):
     print("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK")
     print("\n"*middle)
     print(" "*cmiddle)
-    typing.typingPrintDelay("                                                   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓", delay)
-    time.sleep(delay*2)
-    clear.clear()
+    typing.typingPrintDelay("                                                                   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓", delay)
 
-def hackChance():
-    num = random.randint(1,7)
-    if (num % 2) == 0:
-        typing.typingPrint("\n\n\nUnable to access login screen. Please enter Maintence Password to continue\n")
-        input()
-    else:
-        typing.typingPrint("\n\n> LOGON ADMIN")
-        time.sleep(1)
-        typing.typingPrint("\n\nENTER PASSWORD NOW")
-        time.sleep(1)
-        typing.typingPrint("\n\n>")
-        time.sleep(2)
-        typing.typingPrint(" ************")
-        input()
     
 
 def startup():
-    hackChance()
+    typing.typingPrint("\n\n> LOGON ADMIN")
+    time.sleep(1)
+    typing.typingPrint("\n\nENTER PASSWORD NOW")
+    time.sleep(1)
+    typing.typingPrint("\n\n>")
+    time.sleep(2)
+    typing.typingPrint(" ************")
+    input()
+    clear.clear()
+    time.sleep(1)
+    loadingScreenTyping(0.5)
     time.sleep(1)
     clear.clear()
-    
       
 def home():
-    loadingScreenTyping(0.5)
     print("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK\n")
     time.sleep(1)
-    typing.typingPrint(">" + FileName1)
+    typing.typingPrint(FileName1)
     time.sleep(1)
-    typing.typingPrint(">" + FileName2 )
+    typing.typingPrint(FileName2 )
     time.sleep(1)
     input()
 

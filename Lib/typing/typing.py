@@ -12,9 +12,13 @@ def sleeptime(): # Randomlly decides the delay for that of the typingPrint and t
     
 def typingPrint(text): # Has a delay between individual characters appearing on the screen
     for character in text:
-        sys.stdout.write(Fore.GREEN + Back.BLACK + Style.BRIGHT + character)
-        sys.stdout.flush()
-        time.sleep(sleeptime())
+        if character == " ":
+            sys.stdout.write(Fore.GREEN + Back.BLACK + Style.BRIGHT + character)
+            sys.stdout.flush()
+        else:
+            sys.stdout.write(Fore.GREEN + Back.BLACK + Style.BRIGHT + character)
+            sys.stdout.flush()
+            time.sleep(sleeptime())
 
 def typingInput(text): # Has a delay between individual characters appearing on the screen
     for character in text:
