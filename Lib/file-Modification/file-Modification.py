@@ -1,50 +1,54 @@
-import clear, os
-def createFile():
+import clear, os, shutil
+def createFile(fileName):
     while True:
         try:
-            fileName = input('Enter Name of file: ')
-            f = open(fileName+'.txt', 'x')
-            print('File ' + fileName +'.txt created')
+            f = open(fileName, 'x')
+            print('File ' + fileName +' created')
             break
         except FileExistsError:
             print('File exists already. Try a different name')
+            break
             
             
-def editFile():
-    done = False
+def editFile(fileName):
     while True:
         try:
-            fileName = input('Enter Name of file: ')
-            f = open(fileName+'.txt', 'a')
-            f.write(input('Enter text here:\n'))
+            f = open(fileName, 'a')
+            f.write(input('Enter text here:\n')+'\n')
             f.close
             break
         except:
             print('\nFile does not exist')
+            break
             
-def deleteFile():
+def deleteFile(fileName):
     while True:
-        fileName = input('Enter Name of file: ')
-        if os.path.exists(fileName+'.txt'):
-            os.remove(fileName+'.txt')
-            print(fileName+'.txt has been successfully deleted')
+        if os.path.exists(fileName):
+            os.remove(fileName)
+            print(fileName+' has been successfully deleted')
             break
         else:
             print('\nThe file does not exist')
-def viewFile():
+            break
+def viewFile(fileName):
     while True:
         try:
-            fileName = input('Enter Name of file: ')
-            f = open(fileName+'.txt', 'r')
+            f = open(fileName, 'r')
             print(f.readlines())
             f.close()
             break
         except:
             print('\nThe file does not exist')
-   
+            break
+
 def commands():
     while True:
-        cmd = input()
+        #global rawcmd
+        rawcmd = input('> ').split()
+        cmd = rawcmd[0]
+        #print (rawcmd)
+        #print (cmd)
+        
         if cmd == '?':
             print('Here is a list of commands for the RobCo Industries (TM) TermLink System')
             print('\n? - This page of Documentation')
@@ -57,27 +61,38 @@ def commands():
             print('\nrmvfile - Delete a file')
             print('\neditfile - Edit the contents of a file')
             print('\nreadfile - Read the contents of a file')
+            print('\nrmvtree - Delete a folder')
+            print('\nexit - Exits the terminal')
         elif cmd == 'ls':
             print('Current Working Directory: ' +os.getcwd())
-            os.listdir()
+            delimiter = '\n'
+            files = delimiter.join(os.listdir())
+            print(files)
         elif cmd == 'cd':
-            pass
-        elif cmd == 'cd ..':
-            pass
+            path = os.path.abspath(rawcmd[1])
+            os.chdir(path)          
         elif cmd == 'cwd':
-            print(os.getcwd)
+            print(os.getcwd())
         elif cmd == 'mkdir':
-            name=input('Enter name of new folder')
+            name=rawcmd[1]
             os.mkdir(name)
         elif cmd == 'mkfile':
-            createFile()
+            name = rawcmd[1]
+            createFile(name)
         elif cmd == 'rmvfile':
-            deleteFile()
+            name = rawcmd[1]
+            deleteFile(name)
         elif cmd == 'editfile':
-            editFile()
+            name = rawcmd[1]
+            editFile(name)
         elif cmd == 'readfile':
-            viewFile()
-
+            name = rawcmd[1]
+            viewFile(name)
+        elif cmd == 'rmvtree':
+            name = rawcmd[1]
+            shutil.rmtree(name)
+        elif cmd == 'exit':
+            exit()
 
 clear.clear()
 
