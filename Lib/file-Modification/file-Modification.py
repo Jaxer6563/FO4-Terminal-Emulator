@@ -11,16 +11,23 @@ def createFile(fileName):
             
             
 def editFile(fileName):
+    '''
     while True:
         try:
             f = open(fileName, 'a')
             f.write(input('Enter text here:\n')+'\n')
-            f.close
+            f.close()
             break
         except:
             print('\nFile does not exist')
             break
-            
+    '''
+    while True:
+        with open(fileName, 'a') as f:
+            try:
+                f.write(input()+'\n')
+            except KeyboardInterrupt:
+                break
 def deleteFile(fileName):
     while True:
         if os.path.exists(fileName):
@@ -34,7 +41,7 @@ def viewFile(fileName):
     while True:
         try:
             f = open(fileName, 'r')
-            print(f.readlines())
+            print(f.read())
             f.close()
             break
         except:
