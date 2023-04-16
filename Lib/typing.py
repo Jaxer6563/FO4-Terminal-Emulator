@@ -1,5 +1,6 @@
 import time, sys, colorama, random
 from colorama import Fore, init, Back, Style
+from os import system, name
 
 
 init()

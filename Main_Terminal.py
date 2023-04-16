@@ -1,6 +1,5 @@
 import time, sys, shutil, random
-from Lib.typing import typing
-from Lib.clear import clear
+from Lib import typing, clear, fileModification
 
 FileName1 = " Tips\n\n"
 FileName2 = " Chem Supplier Notes\n\n"
@@ -52,9 +51,9 @@ def home():
     time.sleep(1)
     typing.typingPrint(">" + FileName2 )
     time.sleep(1)
-    input()
-
+    
 typing.typingPrint("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK")
 time.sleep(1)
 startup()
 home()
+fileModification.commands()
