@@ -1,4 +1,4 @@
-import time, sys, shutil, random
+import time, sys, shutil, random, os
 from Lib import typing_, clear, fileModification
 
 FileName1 = " Tips\n\n"
@@ -46,12 +46,8 @@ def startup():
 def home():
     loadingScreenTyping(0.5)
     print("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK\n")
-    time.sleep(1)
-    typing_.typingPrint(">" + FileName1)
-    time.sleep(1)
-    typing_.typingPrint(">" + FileName2 )
-    time.sleep(1)
-    
+clear.clear()
+os.chdir('files')
 typing_.typingPrint("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK")
 time.sleep(1)
 startup()
