@@ -1,0 +1,9 @@
+#Password cracking portion of the FO4-Terminal-Emulator
+
+import random
+
+words = ['MARKS','EMPTY','ENACT','SWORE','HELPS','KNOWS','STAKE','LARGE','UNITE','STARK','TORCH','HANDY','TRACK','DAILY','CLOCK','GLASS','SEIZE','SLING','REFER','FLAME','HOMES','WOULD','SMALL','APTLY','THESE','FAULT','GOODS']
+idx = random.range(0,26)
+password = words[idx]
+
+print(password)
