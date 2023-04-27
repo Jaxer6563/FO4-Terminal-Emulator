@@ -58,10 +58,10 @@ def commands():
             cmd = rawcmd[0]
             
             
-            if cmd == '?':
+            if cmd == '?' or 'help':
                 typing_.typingPrint('Here is a list of commands for the RobCo Industries (TM) TermLink System')
-                typing_.typingPrint('\n? - This page of Documentation')
-                typing_.typingPrint('\nls - See all files in the Current Working Directory')
+                typing_.typingPrint('\n? or help - This page of Documentation')
+                typing_.typingPrint('\nls or dir - See all files in the Current Working Directory')
                 typing_.typingPrint('\ncd - Change the Current Working Directory')
                 typing_.typingPrint('\ncd .. - Change the Current Working Directory to one level above the current Directory')
                 typing_.typingPrint('\ncwd - See the Current Working Directory')
@@ -73,7 +73,7 @@ def commands():
                 typing_.typingPrint('\nrmvtree - Delete a folder')
                 typing_.typingPrint('\nexit - Exits the terminal')
                 typing_.typingPrint('\npy or python - runs a python script. (Meant for simple python scripts)\n')
-            elif cmd == 'ls':
+            elif cmd == 'ls' or cmd == 'dir':
                 typing_.typingPrint('Current Working Directory: ' +os.getcwd()+'\n')
                 delimiter = '\n'
                 files = delimiter.join(os.listdir())
