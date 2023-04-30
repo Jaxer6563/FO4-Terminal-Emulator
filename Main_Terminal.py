@@ -1,5 +1,9 @@
 import time, sys, shutil, random, os
+<<<<<<< HEAD
 from Lib import typing_, clear, fileModification
+=======
+from Lib import typing_, clear, fileModification, hacking
+>>>>>>> main
 
 FileName1 = " Tips\n\n"
 FileName2 = " Chem Supplier Notes\n\n"
@@ -22,10 +26,11 @@ def loadingScreenTyping(delay):
     clear.clear()
 
 def hackChance():
-    num = random.randint(1,7)
+    num = random.randint(2,4)
     if (num % 2) == 0:
         typing_.typingPrint("\n\n\nUnable to access login screen. Please enter Maintence Password to continue\n")
         input()
+        hacking.crackPasscode()
     else:
         typing_.typingPrint("\n\n> LOGON ADMIN")
         time.sleep(1)
@@ -46,8 +51,15 @@ def startup():
 def home():
     loadingScreenTyping(0.5)
     print("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK\n")
+<<<<<<< HEAD
 clear.clear()
 os.chdir('files')
+=======
+
+typing_.typingPrint(' ')
+clear.clear()
+os.chdir('Home/Users')
+>>>>>>> main
 typing_.typingPrint("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK")
 time.sleep(1)
 startup()
