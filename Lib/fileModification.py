@@ -1,5 +1,9 @@
 import os, shutil, time
+<<<<<<< HEAD
+from Lib import typing_, clear, imageviewer
+=======
 from Lib import typing_, clear
+>>>>>>> main
 
 def createFile(fileName):
     while True:
@@ -56,12 +60,26 @@ def commands():
         try:
             rawcmd = typing_.typingInput('> ').split()
             cmd = rawcmd[0]
+<<<<<<< HEAD
+
+            
+            
+<<<<<<< Updated upstream
+            if cmd == '?':
+=======
+            if cmd == '?' or cmd =='help':
+>>>>>>> Stashed changes
+                typing_.typingPrint('Here is a list of commands for the RobCo Industries (TM) TermLink System')
+                typing_.typingPrint('\n? - This page of Documentation')
+                typing_.typingPrint('\nls - See all files in the Current Working Directory')
+=======
             
             
             if cmd == '?' or 'help':
                 typing_.typingPrint('Here is a list of commands for the RobCo Industries (TM) TermLink System')
                 typing_.typingPrint('\n? or help - This page of Documentation')
                 typing_.typingPrint('\nls or dir - See all files in the Current Working Directory')
+>>>>>>> main
                 typing_.typingPrint('\ncd - Change the Current Working Directory')
                 typing_.typingPrint('\ncd .. - Change the Current Working Directory to one level above the current Directory')
                 typing_.typingPrint('\ncwd - See the Current Working Directory')
@@ -72,8 +90,14 @@ def commands():
                 typing_.typingPrint('\nreadfile - Read the contents of a file')
                 typing_.typingPrint('\nrmvtree - Delete a folder')
                 typing_.typingPrint('\nexit - Exits the terminal')
+<<<<<<< HEAD
+                typing_.typingPrint('\nview - opens a video or image in a pygame window')
+                typing_.typingPrint('\npy or python - runs a python script. (Meant for simple python scripts)\n')
+            elif cmd == 'ls':
+=======
                 typing_.typingPrint('\npy or python - runs a python script. (Meant for simple python scripts)\n')
             elif cmd == 'ls' or cmd == 'dir':
+>>>>>>> main
                 typing_.typingPrint('Current Working Directory: ' +os.getcwd()+'\n')
                 delimiter = '\n'
                 files = delimiter.join(os.listdir())
@@ -115,7 +139,33 @@ def commands():
                 time.sleep(5)
                 clear.clear()
                 exit()
+<<<<<<< HEAD
+            elif cmd == 'view':
+                file_name, file_extension = os.path.splitext(rawcmd[1])
+                if file_extension == '.png' or file_extension == '.jpg' or file_extension == '.jpeg':
+                    try:
+                        imageviewer.viewImage(rawcmd[1])
+                    except KeyboardInterrupt:
+                        break
+                    except FileNotFoundError:
+                        typing_.typingPrint('File does not exist\n')
+                        break
+                elif file_extension == '.mp4':
+                    try:
+                        #imageviewer.viewImage(rawcmd[1])
+                        print('I am a work in progress')
+                    except KeyboardInterrupt:
+                        break
+                    except FileNotFoundError:
+                        typing_.typingPrint('File does not exist\n')
+                        break
+                else:
+                    typing_.typingPrint("Please supply a .png, .jpg, or .mp4 file.")
+                    break
+            elif cmd == 'py' or cmd == 'python':
+=======
             elif cmd == 'py' or 'python':
+>>>>>>> main
                 
                     
                 while True:
@@ -134,6 +184,17 @@ def commands():
                     else:
                         typing_.typingPrint("Please supply a python script with the '.py' file extension\n")
                         break
+<<<<<<< HEAD
+            elif cmd == 'GithubDesktop':
+                try:
+                    os.startfile("C:/Users/syringJ/AppData/Local/GitHubDesktop/GitHubDesktop.exe")
+                except FileNotFoundError:
+                    print('Hmmm. Its not working yet. Try again later.')
+                    break
+                except KeyboardInterrupt:
+                    break
+=======
+>>>>>>> main
         except KeyboardInterrupt:
             typing_.typingPrint('Please use the command exit to exit the terminal\n')
             commands()

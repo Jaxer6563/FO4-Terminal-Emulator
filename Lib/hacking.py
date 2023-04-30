@@ -15,6 +15,24 @@ def crackPasscode():
     while done == False:
         passwordScreenHeader()
         if attempts == 4:
+<<<<<<< HEAD
+            print('Attempts Left: ▓ ▓ ▓ ▓\n\n')
+            possiblePasswords()
+        elif attempts == 3:
+            print('Attempts Left: ▓ ▓ ▓\n\n')
+            possiblePasswords()
+        elif attempts == 2:
+            print('Attempts Left: ▓ ▓\n\n')
+            possiblePasswords()
+        elif attempts == 1:
+            print('Attempts Left: ▓  - Lockout Imminent\n\n')
+            possiblePasswords()
+        elif attempts == 0:
+            print('No More Attempts. Lockout Initiated')
+            exit()
+        
+        passwordInput = input("Enter the Maintence Password to Continue: ")
+=======
             typing_.typingPrintDelay('Attempts Left: ▓ ▓ ▓ ▓\n\n',0.125)
             possiblePasswords()
         elif attempts == 3:
@@ -31,6 +49,7 @@ def crackPasscode():
             exit()
         
         passwordInput = typing_.typingInput("Enter the Maintence Password to Continue: ")
+>>>>>>> main
         if passwordInput == password:
             typing_.typingPrintDelay('Success!',0.125)
             break
