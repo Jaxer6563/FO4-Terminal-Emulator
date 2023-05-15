@@ -37,9 +37,9 @@ def shutdown(): # Closes the program.
     clear.clear()
     print("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK\n")
     print("\n"*middle)
-    typing_.typingPrint('   Thank you for using RobCo Industries (TM) TermLink!\n')
+    typing_.typingPrint('               Thank you for using RobCo Industries (TM) TermLink!\n                 ')
     print(" "*cmiddle)
-    typing_.typingPrintDelay("     ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 5)
+    typing_.typingPrintDelay("                    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓", 5)
     clear.clear()
     exit()
 

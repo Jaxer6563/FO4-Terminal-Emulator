@@ -14,8 +14,7 @@ def loadingScreenTyping(delay):  # Gives a simple loading screen, taking an inte
     cmiddle = int((columns/2))
     print("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK")
     print("\n"*middle)
-    print(" "*cmiddle)
-    typing_.typingPrintDelay("                 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓", delay)
+    typing_.typingPrintDelay("                    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓", delay)
     time.sleep(delay*2)
     clear.clear()
 
