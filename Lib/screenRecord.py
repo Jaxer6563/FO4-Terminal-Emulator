@@ -1,6 +1,6 @@
 # importing the required packages
 import pyautogui
-import cv2
+import cv2 # type:ignore
 import numpy as np
 
 # Specify resolution
