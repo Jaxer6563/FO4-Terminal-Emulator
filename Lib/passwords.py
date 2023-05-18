@@ -1,17 +1,20 @@
+from typing import List
 import random as ran
-wordlist = []
-f = open('password.txt', 'r')
-words = f.read()
-possiblewords = words.splitlines()
-alreadyUsed=[]
-for i in range(28):
-    while True:
-    index = randint(0,27)
-    if index in alreadyUsed:
-        break
-    else:
-        alreadyUsed.append(index)
-        wordlist.append(possibleWords[index])
-        print (wordlist[index])
+wordlist = [] #type: List[str]
+list = 'password.txt'
+    
+def getpassword(listofwords):
+    f = open(list,'r')
+    words = f.read()
+    possibleWords = words.splitlines()
+    
+    indicies = ran.sample(range(1,40),28)
+    for i in indicies:
+        wordlist.append(possibleWords[i])
+        
+    return wordlist
     
     
+    
+getpassword(list)
+
