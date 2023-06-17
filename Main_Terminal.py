@@ -6,6 +6,10 @@ lines = shutil.get_terminal_size().lines
 middle = int((lines / 2)-2)
 cmiddle = int((columns/2)-15)
 
+
+
+
+
 def loadingScreenTyping(delay):  # Gives a simple loading screen, taking an integer as the delay period.
     clear.clear()
     columns = shutil.get_terminal_size().columns

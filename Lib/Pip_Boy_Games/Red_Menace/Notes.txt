@@ -1,0 +1,5 @@
+-Screen Size
+	- Default (238,175)
+	- Level Size (200,155)
+	+ Figure out how to scale an image in pygame so that the image can be (400,310) for easier viewing
+	- Max Screen Size should be (800,620)

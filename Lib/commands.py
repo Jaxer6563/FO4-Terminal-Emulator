@@ -1,6 +1,6 @@
 import os, shutil, time
 from Lib import typing_, clear, imageviewer, videoplayer
-def cmd_help():
+def cmd_help(): #Defines all possible commands to be used.
     typing_.typingPrint('Here is a list of commands for the RobCo Industries (TM) TermLink System')
     typing_.typingPrint('\n? or help - This page of Documentation')
     typing_.typingPrint('\nls or dir - See all files in the Current Working Directory')
@@ -12,9 +12,10 @@ def cmd_help():
     typing_.typingPrint('\neditfile - Edit the contents of a file')
     typing_.typingPrint('\nreadfile - Read the contents of a file')
     typing_.typingPrint('\nrmvtree - Delete a folder')
-    typing_.typingPrint('\nexit - Exits the terminal.\n \t exit -n - Shuts down the TermLink System. \n \t -r Restarts the TermLink System.')
+    typing_.typingPrint('\nshutdown - Exits the terminal.\n \t exit -n - Shuts down the TermLink System. \n \t -r Restarts the TermLink System.')
     typing_.typingPrint('\nview - Opens a video or image')
     typing_.typingPrint('\npy or python - Runs a python script. (Meant for simple python scripts)\n')
+    typing_.typingPrint('\nsettings - Opens settings menu')
 
 def ls(): #Prints out the current directory.
     typing_.typingPrint(os.getcwd()+'\n')
@@ -127,10 +128,20 @@ def python(fileName): #Runs python scripts from within the program.
             typing_.typingPrint("Please supply a python script with the '.py' file extension\n")
             break
 
+def settings():
+    clear.clear()
+    print("WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK\n")
+    typing_.typingPrint('Settings:')
+    typing_.typingPrint('\n\t User - ADMIN')
+    typing_.typingPrint('\n\t Password - ************')
+    typing_.typingPrint('\n\t User - ')
+    typing_.typingPrint('\n\t User - ADMIN')
+
 cmd_funcs = {  #List of all acceptable commands.
     '?': cmd_help,
     'help': cmd_help,
     'ls': ls,
+    'dir':ls,
     'cd': cd,
     'mkdir': os.mkdir,
     'mkFile': mkFile,
@@ -143,6 +154,7 @@ cmd_funcs = {  #List of all acceptable commands.
     'view':view,
     'py':python,
     'python':python,  
+    'settings':settings,
 }
 def commands(): # All the commands on the terminal system.
     while True:
